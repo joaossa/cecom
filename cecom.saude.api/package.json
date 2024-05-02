@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
-    "production": "pm2 start index.js --name ibg.adm.eleicao.api"
+    "production": "pm2 start index.js --name cecom.saude.api"
   },
   "keywords": [],
   "author": "",
