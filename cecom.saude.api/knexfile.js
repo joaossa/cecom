@@ -16,8 +16,5 @@ module.exports = {
         callback(err, connection);
       });
     }
-  },
-  migrations: {
-    tableName: 'cecom.knex_migrations'
   }
 };
