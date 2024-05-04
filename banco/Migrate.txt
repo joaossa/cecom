@@ -1,0 +1,911 @@
+--------------------------------
+--------------------------------
+Apagar tabelas do banco
+--------------------------------
+--------------------------------
+
+drop table evolucoesfinanceiro;
+drop table parcelasreceberassinatura;
+drop table parcelasreceber;
+drop table pacienteshumor;
+drop table itensfinanceirosassinaturas;
+drop table itensfinanceiro;
+drop table financeiro;
+drop table evolucoes;
+drop table enderecosprofissionais;
+drop table enderecospacientes;
+drop table dsm_master;
+drop table contasreceber;
+drop table cid_master;
+drop table assinaturas;
+drop table arquivosassinados;
+drop table agendaprofissionais;
+drop table unidadesorganizacionais;
+drop table quadrosvagas;
+drop table prontuariospacientes;
+drop table profissionais;
+drop table pacientes;
+drop table master;
+drop table gruposdsm;
+drop table gruposcid;
+drop table enderecos;
+drop table cidades;
+drop table unidadesfederacao;
+drop table tiposrecebimento;
+drop table tiposprocedimentos;
+drop table tiposevolucoes;
+drop table planos;
+drop table paises;
+drop table ocupacoes;
+drop table motivosexclamacao;
+drop table motivosdesistencia;
+drop table locaisatendimentos;
+drop table horarios;
+drop table escolaridades;
+drop table cargos;
+
+--------------------------------
+--------------------------------
+Apagar os arquivos migrations
+--------------------------------
+--------------------------------
+
+del C:\cecom\cecom.saude.api\migrations\*.*
+
+delete C:\cecom\cecom.saude.api\migrations\20240504023038_create_table_cargos.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023059_create_table_escolaridades.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023259_create_table_horarios.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023314_create_table_locaisatendimentos.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023334_create_table_motivosdesistencia.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023352_create_table_motivosexclamacao.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023410_create_table_ocupacoes.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023446_create_table_paises.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023512_create_table_planos.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023526_create_table_tiposevolucoes.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023546_create_table_tiposprocedimentos.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023558_create_table_tiposrecebimento.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023613_create_table_unidadesfederacao.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023627_create_table_cidades.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023642_create_table_enderecos.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023653_create_table_gruposcid.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023707_create_table_gruposdsm.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023718_create_table_master.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023730_create_table_pacientes.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023757_create_table_profissionais.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023809_create_table_prontuariospacientes.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023821_create_table_quadrosvagas.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023833_create_table_unidadesorganizacionais.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023846_create_table_agendaprofissionais.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023859_create_table_arquivosassinados.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023911_create_table_assinaturas.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023922_create_table_cid_master.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023939_create_table_contasreceber.js
+delete C:\cecom\cecom.saude.api\migrations\20240504023952_create_table_dsm_master.js
+delete C:\cecom\cecom.saude.api\migrations\20240504024003_create_table_enderecospacientes.js
+delete C:\cecom\cecom.saude.api\migrations\20240504024015_create_table_enderecosprofissionais.js
+delete C:\cecom\cecom.saude.api\migrations\20240504024027_create_table_evolucoes.js
+delete C:\cecom\cecom.saude.api\migrations\20240504024038_create_table_financeiro.js
+delete C:\cecom\cecom.saude.api\migrations\20240504024049_create_table_itensfinanceiro.js
+delete C:\cecom\cecom.saude.api\migrations\20240504024101_create_table_itensfinanceirosassinaturas.js
+delete C:\cecom\cecom.saude.api\migrations\20240504024113_create_table_pacienteshumor.js
+delete C:\cecom\cecom.saude.api\migrations\20240504024126_create_table_parcelasreceber.js
+delete C:\cecom\cecom.saude.api\migrations\20240504024138_create_table_parcelasreceberassinatura.js
+delete C:\cecom\cecom.saude.api\migrations\20240504024151_create_table_evolucoesfinanceiro.js
+
+
+--------------------------------
+--------------------------------
+Recriar as migrations com as alterações
+--------------------------------
+--------------------------------
+
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_cargos
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_escolaridades
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_horarios
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_locaisatendimentos
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_motivosdesistencia
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_motivosexclamacao
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_ocupacoes
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_paises
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_planos
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_tiposevolucoes
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_tiposprocedimentos
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_tiposrecebimento
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_unidadesfederacao
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_cidades
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_enderecos
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_gruposcid
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_gruposdsm
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_master
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_pacientes
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_profissionais
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_prontuariospacientes
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_quadrosvagas
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_unidadesorganizacionais
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_agendaprofissionais
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_arquivosassinados
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_assinaturas
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_cid_master
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_contasreceber
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_dsm_master
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_enderecospacientes
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_enderecosprofissionais
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_evolucoes
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_financeiro
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_itensfinanceiro
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_itensfinanceirosassinaturas
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_pacienteshumor
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_parcelasreceber
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_parcelasreceberassinatura
+C:\cecom\cecom.saude.api> npx knex migrate:make create_table_evolucoesfinanceiro
+
+
+--------------------------------
+--------------------------------
+Conteúdos dos arquivos de migração - incluir em cada migration criado acima
+--------------------------------
+--------------------------------
+
+// Migration for table: cargos
+exports.up = function(knex) {
+  return knex.schema.createTable('cargos', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 50).notNullable();
+    table.integer('cdNivel').nullable();
+    table.string('stInativo', 1).defaultTo('N').nullable();
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('cargos');
+};
+
+
+// Migration for table: escolaridades
+exports.up = function(knex) {
+  return knex.schema.createTable('escolaridades', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 50).notNullable();
+    table.string('stinativo', 1).defaultTo('N').notNullable(); // Assuming it should be notNullable based on the use of default and check constraint in SQL
+    table.check('stinativo IN (\'S\', \'N\')'); // Adding the check constraint
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('escolaridades');
+};
+
+// Migration for table: horarios
+exports.up = function(knex) {
+  return knex.schema.createTable('horarios', function(table) {
+    table.smallint('cd_horario').notNullable().primary(); // Assuming smallint maps directly and is the primary key
+    table.char('st_usorestrito', 1).check('st_usorestrito IN (\'S\', \'N\')'); // Restrict to 'S' or 'N'
+    table.string('ds_horario', 50).notNullable();
+    table.timestamp('hr_inicio').notNullable();
+    table.timestamp('hr_fim').nullable();
+    table.char('st_inativo', 1).check('st_inativo IN (\'S\', \'N\')'); // Restrict to 'S' or 'N'
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('horarios');
+};
+
+// Migration for table: locaisatendimentos
+exports.up = function(knex) {
+  return knex.schema.createTable('locaisatendimentos', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 100).notNullable();
+    table.string('siglaUnidade', 10).nullable();
+    table.string('endereco', 150).nullable();
+    table.string('telefone', 50).nullable();
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('locaisatendimentos');
+};
+
+
+// Migration for table: motivosdesistencia
+exports.up = function(knex) {
+  return knex.schema.createTable('motivosdesistencia', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 50).notNullable();
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('motivosdesistencia');
+};
+
+
+// Migration for table: motivosexclamacao
+exports.up = function(knex) {
+  return knex.schema.createTable('motivosexclamacao', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 50).notNullable();
+    table.string('stinativo', 1).defaultTo('N').notNullable(); // Defaults to 'N' and is not nullable
+    table.check('stinativo IN (\'S\', \'N\')'); // Adding the check constraint for 'S' or 'N'
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('motivosexclamacao');
+};
+
+
+// Migration for table: ocupacoes
+exports.up = function(knex) {
+  return knex.schema.createTable('ocupacoes', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 250).notNullable();
+    table.string('ocupacao', 10).nullable(); // Optionally store an occupation code or similar identifier
+    table.integer('cd_ocupacaopai').nullable(); // Optional reference to a parent occupation
+    table.string('stInativo', 1).defaultTo('N').nullable(); // Status inactive, defaults to 'N'
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('ocupacoes');
+};
+
+
+// Migration for table: paises
+exports.up = function(knex) {
+  return knex.schema.createTable('paises', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 35).notNullable();
+    table.string('nacionalidade', 50).nullable();
+    table.integer('cdIbge').nullable(); // Optional integer field for additional identifiers like IBGE codes
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('paises');
+};
+
+
+// Migration for table: planos
+exports.up = function(knex) {
+  return knex.schema.createTable('planos', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 50).notNullable();
+    table.decimal('valor', 14, 2).notNullable(); // Assuming a decimal type for money values
+    table.integer('qtd_profissinais').notNullable();
+    table.integer('qtd_clinicas').notNullable();
+    table.timestamp('validade_inicio').notNullable();
+    table.timestamp('validade_final').nullable();
+    table.string('st_inativo', 1).defaultTo('N').check('st_inativo IN (\'S\', \'N\')'); // Adds a check constraint
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('planos');
+};
+
+
+// Migration for table: tiposevolucoes
+exports.up = function(knex) {
+  return knex.schema.createTable('tiposevolucoes', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 50).notNullable();
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('tiposevolucoes');
+};
+
+
+// Migration for table: tiposprocedimentos
+exports.up = function(knex) {
+  return knex.schema.createTable('tiposprocedimentos', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 50).notNullable();
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('tiposprocedimentos');
+};
+
+
+// Migration for table: tiposrecebimento
+exports.up = function(knex) {
+  return knex.schema.createTable('tiposrecebimento', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 50).notNullable();
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('tiposrecebimento');
+};
+
+
+// Migration for table: unidadesfederacao
+exports.up = function(knex) {
+  return knex.schema.createTable('unidadesfederacao', function(table) {
+    table.char('codigo', 2).notNullable().primary(); // Using char for the 2-character code, set as primary key
+    table.string('descricao', 100).notNullable();
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('unidadesfederacao');
+};
+
+
+// Migration for table: cidades
+exports.up = function(knex) {
+  return knex.schema.createTable('cidades', function(table) {
+    table.increments('codigo'); // Handles the int2 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 100).notNullable();
+    table.char('cdUf', 2).notNullable().references('codigo').inTable('unidadesfederacao'); // Foreign key reference to unidadesfederacao
+    table.integer('cdPais').notNullable().references('codigo').inTable('paises'); // Foreign key reference to paises
+    table.string('cepGeral', 9).notNullable();
+    table.integer('cdIbge').nullable(); // Optional IBGE code
+    table.string('stInativo', 1).defaultTo('N').nullable();
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('cidades');
+};
+
+
+// Migration for table: enderecos
+exports.up = function(knex) {
+  return knex.schema.createTable('enderecos', function(table) {
+    table.increments('codigo'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.string('enderecoresidencia', 125).nullable();
+    table.string('nr_residencia', 10).nullable();
+    table.string('complementoresidencia', 100).nullable();
+    table.string('bairroresidencia', 100).nullable();
+    table.string('cep_residencia', 10).nullable();
+    table.integer('cdCidadeResidencia').notNullable().references('codigo').inTable('cidades'); // Foreign key reference to cidades
+    table.timestamp('dtAtualizacao').defaultTo(knex.fn.now()).nullable();
+    table.string('telefone', 10).notNullable();
+    table.char('tp_pessoalcontato', 1).nullable();
+    table.integer('ddd').nullable();
+    table.string('nm_contato', 100).nullable();
+    table.char('tp_fone', 1).nullable().check('tp_fone IN (\'R\', \'T\', \'C\', \'P\')'); // Check constraint for phone type
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('enderecos');
+};
+
+
+// Migration for table: gruposcid
+exports.up = function(knex) {
+  return knex.schema.createTable('gruposcid', function(table) {
+    table.increments('cd_grupocid'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.string('ds_grupocid', 250).notNullable();
+    table.integer('cd_grupocidpai').nullable().references('cd_grupocid').inTable('gruposcid'); // Recursive foreign key to the same table
+    table.integer('versao').nullable().check('versao IN (9, 10)'); // Assuming 'versao' represents versions like CID-9 or CID-10
+    table.primary(['cd_grupocid']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('gruposcid');
+};
+
+
+// Migration for table: gruposdsm
+exports.up = function(knex) {
+  return knex.schema.createTable('gruposdsm', function(table) {
+    table.increments('cd_grupodsm'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.string('ds_grupodsm', 250).notNullable();
+    table.integer('cd_grupodsmpai').nullable().references('cd_grupodsm').inTable('gruposdsm'); // Recursive foreign key to the same table
+    table.integer('versao').nullable().check('versao IN (4, 5)'); // Check for DSM-IV (4) or DSM-5 (5)
+    table.primary(['cd_grupodsm']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('gruposdsm');
+};
+
+
+// Migration for table: master
+exports.up = function(knex) {
+  return knex.schema.createTable('master', function(table) {
+    table.increments('codigo'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.integer('codigomaster').notNullable().references('codigo').inTable('master'); // Self-referencing foreign key for hierarchical relationships
+    table.string('nome', 50).notNullable();
+    table.string('email', 200).notNullable().unique();
+    table.timestamp('dt_atualizacao').defaultTo(knex.fn.now());
+    table.string('password', 255).notNullable();
+    table.boolean('admin').defaultTo(false).notNullable();
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('master');
+};
+
+
+// Migration for table: pacientes
+exports.up = function(knex) {
+  return knex.schema.createTable('pacientes', function(table) {
+    table.integer('codigomaster').notNullable().references('codigo').inTable('master'); // Foreign key to master table
+    table.increments('codigopaciente'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.string('nomepaciente', 100).notNullable();
+    table.integer('codigoocupacao').nullable().references('codigo').inTable('ocupacoes'); // Optional foreign key to ocupacoes
+    table.timestamp('dt_admissao').nullable();
+    table.integer('cd_escolaridade').nullable().references('codigo').inTable('escolaridades'); // Optional foreign key to escolaridades
+    table.string('nm_responsavel', 100).nullable();
+    table.char('tp_parentesco', 1).notNullable().defaultTo('R').check('tp_parentesco IN (\'P\', \'M\', \'T\', \'F\', \'C\', \'O\', \'R\')'); // Default to 'R' (Sou o paciente)
+    table.integer('cd_escolaridaderesponsavel').nullable().references('codigo').inTable('escolaridades'); // Optional foreign key to escolaridades
+    table.integer('codigoocupacaoresponsavel').nullable().references('codigo').inTable('ocupacoes'); // Optional foreign key to ocupacoes
+    table.string('cpfresponsavel', 14).nullable();
+    table.primary(['codigomaster', 'codigopaciente']); // Composite primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('pacientes');
+};
+
+
+// Migration for table: profissionais
+exports.up = function(knex) {
+  return knex.schema.createTable('profissionais', function(table) {
+    table.increments('codigoprof'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.string('nome', 50).notNullable();
+    table.string('sexo', 1).notNullable().check('sexo IN (\'M\', \'F\', \'I\')'); // M for Male, F for Female, I for Intersex/Other
+    table.date('dtnascimento').notNullable();
+    table.string('cpf', 11).notNullable().unique();
+    table.string('rg', 15).nullable();
+    table.string('orgaoemissor', 10).nullable();
+    table.integer('codigocargo').nullable().references('codigo').inTable('cargos'); // Optional foreign key to cargos
+    table.char('cd_situacao', 1).nullable(); // Could have a check constraint if specific codes are known
+    table.timestamp('dt_admissao').nullable();
+    table.timestamp('dt_demissao').nullable();
+    table.string('apelido', 20).nullable();
+    table.string('entidadeclasse', 100).nullable();
+    table.string('conselhoprofissional', 7).nullable();
+    table.string('email', 200).notNullable().unique();
+    table.string('nmCivil', 50).nullable();
+    table.string('stNmSocial', 1).defaultTo('N').nullable().check('stNmSocial IN (\'S\', \'N\')'); // S for Social Name, N for not used
+    table.primary(['codigoprof']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('profissionais');
+};
+
+
+// Migration for table: prontuariospacientes
+exports.up = function(knex) {
+  return knex.schema.createTable('prontuariospacientes', function(table) {
+    table.integer('codigomaster').notNullable().references('codigo').inTable('master'); // Foreign key to master table
+    table.integer('codigopaciente').notNullable().references('codigopaciente').inTable('pacientes'); // Foreign key to pacientes table
+    table.string('prontuario', 20).notNullable().unique();
+    table.timestamp('datacadastro').defaultTo(knex.fn.now());
+    table.primary(['codigomaster', 'codigopaciente']); // Composite primary key
+    table.unique(['prontuario']); // Ensuring uniqueness for prontuario number
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('prontuariospacientes');
+};
+
+
+// Migration for table: quadrosvagas
+exports.up = function(knex) {
+  return knex.schema.createTable('quadrosvagas', function(table) {
+    table.increments('codigo'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 100).notNullable();
+    table.integer('totalvagas').notNullable();
+    table.integer('vagasocupadas').notNullable();
+    table.integer('vagasdisponiveis').notNullable();
+    table.string('local', 100).nullable();
+    table.timestamp('dataultimaatualizacao').defaultTo(knex.fn.now());
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('quadrosvagas');
+};
+
+
+// Migration for table: unidadesorganizacionais
+exports.up = function(knex) {
+  return knex.schema.createTable('unidadesorganizacionais', function(table) {
+    table.increments('codigo'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 100).notNullable();
+    table.integer('cd_unidadepai').nullable().references('codigo').inTable('unidadesorganizacionais'); // Optional foreign key for hierarchical structure
+    table.string('tipo', 20).notNullable();
+    table.boolean('ativo').defaultTo(true).notNullable(); // Assumes active status by default
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('unidadesorganizacionais');
+};
+
+
+// Migration for table: agendaprofissionais
+exports.up = function(knex) {
+  return knex.schema.createTable('agendaprofissionais', function(table) {
+    table.increments('codigo'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.integer('codigoprofissional').notNullable().references('codigoprof').inTable('profissionais'); // Foreign key to profissionais table
+    table.timestamp('datahorainicio').notNullable();
+    table.timestamp('datahorafim').notNullable();
+    table.integer('codigounidade').notNullable().references('codigo').inTable('unidadesorganizacionais'); // Foreign key to unidadesorganizacionais table
+    table.string('tipo', 20).notNullable(); // Could specify the type of appointment or session
+    table.text('descricao').nullable(); // Optional detailed description of the appointment
+    table.boolean('ativo').defaultTo(true).notNullable(); // Whether the schedule is active
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('agendaprofissionais');
+};
+
+
+// Migration for table: arquivosassinados
+exports.up = function(knex) {
+  return knex.schema.createTable('arquivosassinados', function(table) {
+    table.increments('codigo'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.integer('codigomaster').notNullable().references('codigo').inTable('master'); // Foreign key to master table
+    table.integer('codigoprofissional').notNullable().references('codigoprof').inTable('profissionais'); // Foreign key to profissionais table
+    table.integer('codigoarquivo').notNullable(); // Assume it references another table's primary key, adjust as needed
+    table.timestamp('dataassinatura').defaultTo(knex.fn.now()); // Timestamp of when the file was signed
+    table.boolean('ativo').defaultTo(true).notNullable(); // Whether the signed file is active
+    table.string('hashassinatura', 255).notNullable(); // Store the hash of the signature for verification purposes
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('arquivosassinados');
+};
+
+
+// Migration for table: assinaturas
+exports.up = function(knex) {
+  return knex.schema.createTable('assinaturas', function(table) {
+    table.increments('codigo'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.integer('codigomaster').notNullable().references('codigo').inTable('master'); // Foreign key to master table
+    table.integer('codigoprofissional').notNullable().references('codigoprof').inTable('profissionais'); // Foreign key to profissionais table
+    table.integer('codigoarquivo').notNullable(); // Assuming it references an 'arquivos' table
+    table.timestamp('dataassinatura').defaultTo(knex.fn.now()); // Timestamp of when the signature was applied
+    table.boolean('ativo').defaultTo(true).notNullable(); // Whether the signature is active
+    table.string('hashassinatura', 255).notNullable(); // Store the hash of the signature for verification purposes
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('assinaturas');
+};
+
+
+// Migration for table: cid_master
+exports.up = function(knex) {
+  return knex.schema.createTable('cid_master', function(table) {
+    table.increments('codigo'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 255).notNullable();
+    table.string('codigo_cid', 10).notNullable().unique(); // Unique CID code
+    table.integer('cd_grupocid').nullable().references('cd_grupocid').inTable('gruposcid'); // Optional foreign key to gruposcid
+    table.boolean('ativo').defaultTo(true).notNullable(); // Whether the CID entry is active
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('cid_master');
+};
+
+
+// Migration for table: contasreceber
+exports.up = function(knex) {
+  return knex.schema.createTable('contasreceber', function(table) {
+    table.increments('codigo'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.integer('codigocliente').notNullable().references('codigo').inTable('clientes'); // Foreign key to clientes table
+    table.decimal('valor', 14, 2).notNullable(); // Monetary value of the account receivable
+    table.date('datavencimento').notNullable(); // Due date for the receivable
+    table.date('datapagamento').nullable(); // Date when payment was made
+    table.boolean('pago').defaultTo(false).notNullable(); // Whether the amount has been paid
+    table.text('descricao').nullable(); // Optional description of the receivable
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('contasreceber');
+};
+
+
+// Migration for table: dsm_master
+exports.up = function(knex) {
+  return knex.schema.createTable('dsm_master', function(table) {
+    table.increments('codigo'); // Handles the int4 GENERATED BY DEFAULT AS IDENTITY
+    table.string('descricao', 255).notNullable();
+    table.string('codigo_dsm', 10).notNullable().unique(); // Unique DSM code
+    table.integer('cd_grupodsm').nullable().references('cd_grupodsm').inTable('gruposdsm'); // Optional foreign key to gruposdsm
+    table.boolean('ativo').defaultTo(true).notNullable(); // Whether the DSM entry is active
+    table.primary(['codigo']); // Sets the primary key
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('dsm_master');
+};
+
+// Migration for table: enderecospacientes
+exports.up = function(knex) {
+  return knex.schema.createTable('enderecospacientes', function(table) {
+    table.integer('codigopaciente').primary().notNullable().references('codigopaciente').inTable('pacientes'); // Primary key and foreign key to pacientes table
+    table.string('logradouro', 255).notNullable();
+    table.string('numero', 10).nullable();
+    table.string('complemento', 50).nullable();
+    table.string('bairro', 100).notNullable();
+    table.string('cidade', 100).notNullable();
+    table.string('estado', 2).notNullable();
+    table.string('cep', 8).notNullable();
+    table.timestamp('data_atualizacao').defaultTo(knex.fn.now()); // Timestamp for the last update
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('enderecospacientes');
+};
+
+
+// Migration for table: enderecosprofissionais
+exports.up = function(knex) {
+  return knex.schema.createTable('enderecosprofissionais', function(table) {
+    table.integer('codigoprofissional').primary().notNullable().references('codigoprof').inTable('profissionais'); // Primary key and foreign key to profissionais table
+    table.string('logradouro', 255).notNullable();
+    table.string('numero', 10).nullable();
+    table.string('complemento', 50).nullable();
+    table.string('bairro', 100).notNullable();
+    table.string('cidade', 100).notNullable();
+    table.string('estado', 2).notNullable();
+    table.string('cep', 8).notNullable();
+    table.timestamp('data_atualizacao').defaultTo(knex.fn.now()); // Timestamp for the last update
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('enderecosprofissionais');
+};
+
+exports.up = function(knex) {
+  return knex.schema.createTable('cecom.evolucoes', function(table) {
+    table.increments('cd_evolucao').primary();
+    table.integer('codigoprof').notNullable();
+    table.string('prontuario', 7).notNullable();
+    table.integer('codigomasterpac').notNullable();
+    table.integer('codigopaciente').notNullable();
+    table.timestamp('dt_evolucao').nullable();
+    table.smallint('cd_tipoevolucao').notNullable();
+    table.binary('evolucao').nullable();
+    table.integer('cd_pessoaautorizacao').nullable();
+    table.timestamp('dt_autorizacao').nullable();
+    table.timestamp('dt_impressao').nullable();
+    table.smallint('cd_motivoexclamacao').nullable();
+    table.integer('codigomasterinvalida').notNullable();
+    table.timestamp('dt_invalidacao').nullable();
+    table.string('motivoinvalidacao', 2000).nullable();
+    table.integer('cd_arquivoassinado').nullable();
+    table.integer('codigomasterarq').notNullable();
+    table.smallint('codigolocalatend').notNullable();
+
+    // Foreign Keys
+    table.foreign('cd_arquivoassinado').references('<?>().');
+    table.foreign('codigolocalatend').references('cecom.locaisatendimentos.codigo');
+    table.foreign('cd_motivoexclamacao').references('cecom.motivosexclamacao.codigo');
+    table.foreign('codigomasterinvalida').references('cecom.profissionais.codigoprof');
+    table.foreign('codigoprof').references('cecom.profissionais.codigoprof');
+    table.foreign(['codigomasterpac', 'codigopaciente', 'prontuario']).references('cecom.prontuariospacientes.codigopac', 'cecom.prontuariospacientes.codigopaciente', 'cecom.prontuariospacientes.prontuario');
+    table.foreign('cd_tipoevolucao').references('cecom.tiposevolucoes.codigo');
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('cecom.evolucoes');
+};
+
+
+exports.up = function(knex) {
+  return knex.schema.createTable('cecom.financeiro', function(table) {
+    table.increments('cd_financeiro').primary();
+    table.integer('codigoprof').notNullable();
+    table.integer('codigomasterpac').notNullable();
+    table.integer('codigopaciente').notNullable();
+    table.smallint('qtd_parcelas').notNullable();
+    table.decimal('valor_total').notNullable();
+    table.smallint('qtd_evolucoes').notNullable();
+    table.smallint('cd_tipoprocedimento').notNullable();
+    table.timestamp('dt_registro').nullable();
+
+    // Foreign Keys
+    table.foreign('codigoprof').references('cecom.profissionais.codigoprof');
+    table.foreign(['codigomasterpac', 'codigopaciente']).references('cecom.pacientes.codigomaster', 'cecom.pacientes.codigopaciente');
+    table.foreign('cd_tipoprocedimento').references('cecom.tiposprocedimentos.codigo');
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('cecom.financeiro');
+};
+
+
+exports.up = function(knex) {
+  return knex.schema.createTable('cecom.itensfinanceiro', function(table) {
+    table.increments('cd_itenfinanceiro').primary();
+    table.integer('cd_financeiro').notNullable();
+    table.smallint('numero_parcela').notNullable();
+    table.decimal('valor_parcela').notNullable();
+    table.timestamp('dt_vencimento').nullable();
+
+    // Primary Key
+    table.unique(['cd_itenfinanceiro', 'cd_financeiro']);
+
+    // Foreign Keys
+    table.foreign('cd_financeiro').references('cecom.financeiro.cd_financeiro');
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('cecom.itensfinanceiro');
+};
+
+
+exports.up = function(knex) {
+  return knex.schema.createTable('cecom.itensfinanceirosassinaturas', function(table) {
+    table.increments('cd_itemfinanassinatura').primary();
+    table.integer('codigoassinante').notNullable();
+    table.integer('codigoplano').notNullable();
+    table.integer('codigoassinatura').notNullable();
+    table.decimal('valor_parcela').notNullable();
+    table.timestamp('dt_vencimento').nullable();
+
+    // Foreign Key
+    table.foreign(['codigoassinante', 'codigoplano', 'codigoassinatura']).references('cecom.assinaturas.codigoassinante', 'cecom.assinaturas.codigoplano', 'cecom.assinaturas.codigo');
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('cecom.itensfinanceirosassinaturas');
+};
+
+
+exports.up = function(knex) {
+  return knex.schema.createTable('cecom.pacienteshumor', function(table) {
+    table.increments('cd_pacientehumor').primary();
+    table.integer('codigopacientemaster').notNullable();
+    table.integer('codigopaciente').notNullable();
+    table.timestamp('dt_humor').notNullable();
+    table.integer('codigoevolucao').nullable();
+    table.integer('codigoprof').nullable();
+    table.integer('cidhumano').nullable();
+    table.integer('dsmhumano').nullable();
+    table.smallint('humorintensidade').notNullable();
+
+    // Check Constraint
+    table.checkConstraint('humorintensidade IN (1, 2, 3, 4, 5)');
+
+    // Primary Key
+    table.unique(['cd_pacientehumor', 'codigopacientemaster', 'codigopaciente']);
+
+    // Foreign Keys
+    table.foreign('cidhumano').references('cecom.cid_master.cd_cid_master');
+    table.foreign('dsmhumano').references('cecom.dsm_master.cd_dsm_master');
+    table.foreign(['codigoprof', 'codigoevolucao']).references('cecom.evolucoes.codigoprof', 'cecom.evolucoes.cd_evolucao');
+    table.foreign(['codigopacientemaster', 'codigopaciente']).references('cecom.pacientes.codigomaster', 'cecom.pacientes.codigopaciente');
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('cecom.pacienteshumor');
+};
+
+
+exports.up = function(knex) {
+  return knex.schema.createTable('cecom.parcelasreceber', function(table) {
+    table.increments('cd_parcelasreceber').primary();
+    table.integer('cd_itenfinanceiro').notNullable();
+    table.integer('cd_financeiro').notNullable();
+    table.smallint('numero_parcela').notNullable();
+    table.decimal('valor_parcela').notNullable();
+    table.smallint('cd_tiporecebimento').notNullable();
+    table.timestamp('dt_pagamento').nullable();
+    table.string('id_confirmacaopag', 50).nullable();
+
+    // Primary Key
+    table.unique(['cd_parcelasreceber', 'cd_financeiro', 'cd_itenfinanceiro']);
+
+    // Foreign Keys
+    table.foreign(['cd_financeiro', 'cd_itenfinanceiro']).references('cecom.financeiro.cd_financeiro', 'cecom.financeiro.cd_itenfinanceiro');
+    table.foreign('cd_tiporecebimento').references('cecom.tiposrecebimento.codigo');
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('cecom.parcelasreceber');
+};
+
+
+exports.up = function(knex) {
+  return knex.schema.createTable('cecom.parcelasreceberassinatura', function(table) {
+    table.increments('cd_parcelasreceberassinatura').primary();
+    table.integer('cd_itemfinanassinatura').notNullable();
+    table.smallint('numero_parcela').notNullable();
+    table.decimal('valor_parcela').notNullable();
+    table.smallint('cd_tiporecebimento').notNullable();
+    table.timestamp('dt_pagamento').nullable();
+    table.string('id_confirmacaopag', 50).nullable();
+
+    // Primary Key
+    table.unique(['cd_parcelasreceberassinatura', 'cd_itemfinanassinatura']);
+
+    // Foreign Keys
+    table.foreign('cd_itemfinanassinatura').references('cecom.itensfinanceirosassinaturas.cd_itemfinanassinatura');
+    table.foreign('cd_tiporecebimento').references('cecom.tiposrecebimento.codigo');
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('cecom.parcelasreceberassinatura');
+};
+
+
+exports.up = function(knex) {
+  return knex.schema.createTable('cecom.evolucoesfinanceiro', function(table) {
+    table.increments('cd_evolucaofinanceiro').primary();
+    table.integer('cd_financeiro').notNullable();
+    table.integer('cd_evolucao').notNullable();
+    table.integer('codigoprof').notNullable();
+    table.integer('codigomasterpac').notNullable();
+    table.integer('codigopaciente').notNullable();
+
+    // Primary Key
+    table.unique('cd_evolucaofinanceiro');
+
+    // Unique Constraint
+    table.unique(['cd_evolucao', 'codigoprof', 'cd_financeiro', 'codigomasterpac', 'codigopaciente']);
+
+    // Foreign Keys
+    table.foreign(['cd_evolucao', 'codigoprof']).references('<?>().');
+    table.foreign('cd_financeiro').references('cecom.financeiro.cd_financeiro');
+    table.foreign(['codigomasterpac', 'codigopaciente']).references('cecom.pacientes.codigomaster', 'cecom.pacientes.codigopaciente');
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('cecom.evolucoesfinanceiro');
+};
+
+
+==========================
+
+,
+  migrations: {
+    tableName: 'cecom.knex_migrations'
+  }
