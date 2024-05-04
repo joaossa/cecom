@@ -1,13 +1,13 @@
 // const { db } = require('./.env')
-
 module.exports = {
-  client: 'postgresql',
+  client: 'pg',
   connection: {
-    database: 'ibg_eleicao',
+    database: 'cecom_saude',
     user: 'postgres',
     password: 'Superacaojc01',
     timezone: 'America/Sao_Paulo'
   },
+  searchPath: ['cecom'],
   pool: {
     min: 2,
     max: 10,
@@ -18,6 +18,6 @@ module.exports = {
     }
   },
   migrations: {
-    tableName: 'knex_migrations'
+    tableName: 'cecom.knex_migrations'
   }
 };
