@@ -1,5 +1,5 @@
 exports.up = function(knex) {
-  return knex.schema.createTable('cecom.itensfinanceirosassinaturas', function(table) {
+  return knex.schema.createTable('cecom.itensfinanceirosassinaturas', table => {
     table.increments('cd_itemfinanassinatura').primary();
     table.integer('codigoassinante').notNullable();
     table.integer('codigoplano').notNullable();

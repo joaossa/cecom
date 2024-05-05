@@ -1,6 +1,6 @@
 // Migration for table: prontuariospacientes
 exports.up = function(knex) {
-  return knex.schema.createTable('prontuariospacientes', function(table) {
+  return knex.schema.createTable('prontuariospacientes', table => {
     table.integer('codigomaster').notNullable().references('codigo').inTable('master'); // Foreign key to master table
     table.integer('codigopaciente').notNullable().references('codigopaciente').inTable('pacientes'); // Foreign key to pacientes table
     table.string('prontuario', 20).notNullable().unique();

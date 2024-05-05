@@ -1,6 +1,6 @@
 // Migration for table: enderecospacientes
 exports.up = function(knex) {
-  return knex.schema.createTable('enderecospacientes', function(table) {
+  return knex.schema.createTable('enderecospacientes', table => {
     table.integer('codigopaciente').primary().notNullable().references('codigopaciente').inTable('pacientes'); // Primary key and foreign key to pacientes table
     table.string('logradouro', 255).notNullable();
     table.string('numero', 10).nullable();

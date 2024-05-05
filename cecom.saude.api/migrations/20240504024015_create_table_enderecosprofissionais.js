@@ -1,6 +1,6 @@
 // Migration for table: enderecosprofissionais
 exports.up = function(knex) {
-  return knex.schema.createTable('enderecosprofissionais', function(table) {
+  return knex.schema.createTable('enderecosprofissionais', table => {
     table.integer('codigoprofissional').primary().notNullable().references('codigoprof').inTable('profissionais'); // Primary key and foreign key to profissionais table
     table.string('logradouro', 255).notNullable();
     table.string('numero', 10).nullable();

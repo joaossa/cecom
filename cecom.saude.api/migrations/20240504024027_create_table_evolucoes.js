@@ -1,5 +1,5 @@
 exports.up = function(knex) {
-  return knex.schema.createTable('cecom.evolucoes', function(table) {
+  return knex.schema.createTable('cecom.evolucoes', table => {
     table.increments('cd_evolucao').primary();
     table.integer('codigoprof').notNullable();
     table.string('prontuario', 7).notNullable();

@@ -7,7 +7,7 @@ module.exports = {
     password: 'Superacaojc01',
     timezone: 'America/Sao_Paulo'
   },
-  searchPath: ['cecom'],
+  searchPath: ['cecom', 'public'],
   pool: {
     min: 2,
     max: 10,
@@ -16,5 +16,10 @@ module.exports = {
         callback(err, connection);
       });
     }
-  }
+  },
+  migrations: {
+    tableName: 'knex_migrations',
+    schemaName: 'cecom'
+  },
+  debug: true
 };

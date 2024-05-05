@@ -1,5 +1,5 @@
 exports.up = function(knex) {
-  return knex.schema.createTable('cecom.itensfinanceiro', function(table) {
+  return knex.schema.createTable('cecom.itensfinanceiro', table => {
     table.increments('cd_itenfinanceiro').primary();
     table.integer('cd_financeiro').notNullable();
     table.smallint('numero_parcela').notNullable();
