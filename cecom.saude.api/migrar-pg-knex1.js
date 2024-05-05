@@ -27,7 +27,7 @@ async function generateMigration(table) {
                 if (maxLength) {
                     line += `, ${maxLength}`;
                 }
-                line += nullable ? ');' : ').notNullable();';
+                line += nullable ? ');' : ').notNull();';
                 return line;
             }).join('\n            ')}
         });

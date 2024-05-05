@@ -1,11 +1,11 @@
 exports.up = function(knex) {
   return knex.schema.createTable('cecom.evolucoesfinanceiro', table => {
     table.increments('cd_evolucaofinanceiro').primary();
-    table.integer('cd_financeiro').notNullable();
-    table.integer('cd_evolucao').notNullable();
-    table.integer('codigoprof').notNullable();
-    table.integer('codigomasterpac').notNullable();
-    table.integer('codigopaciente').notNullable();
+    table.integer('cd_financeiro').notNull();
+    table.integer('cd_evolucao').notNull();
+    table.integer('codigoprof').notNull();
+    table.integer('codigomasterpac').notNull();
+    table.integer('codigopaciente').notNull();
 
     // Primary Key
     table.unique('cd_evolucaofinanceiro');

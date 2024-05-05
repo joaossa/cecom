@@ -1,14 +1,14 @@
 exports.up = function(knex) {
   return knex.schema.createTable('cecom.financeiro', table => {
     table.increments('cd_financeiro').primary();
-    table.integer('codigoprof').notNullable();
-    table.integer('codigomasterpac').notNullable();
-    table.integer('codigopaciente').notNullable();
-    table.smallint('qtd_parcelas').notNullable();
-    table.decimal('valor_total').notNullable();
-    table.smallint('qtd_evolucoes').notNullable();
-    table.smallint('cd_tipoprocedimento').notNullable();
-    table.timestamp('dt_registro').nullable();
+    table.integer('codigoprof').notNull();
+    table.integer('codigomasterpac').notNull();
+    table.integer('codigopaciente').notNull();
+    table.smallint('qtd_parcelas').notNull();
+    table.decimal('valor_total').notNull();
+    table.smallint('qtd_evolucoes').notNull();
+    table.smallint('cd_tipoprocedimento').notNull();
+    table.timestamp('dt_registro');
 
     // Foreign Keys
     table.foreign('codigoprof').references('cecom.profissionais.codigoprof');

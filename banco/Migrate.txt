@@ -43,6 +43,8 @@ drop table locaisatendimentos;
 drop table horarios;
 drop table escolaridades;
 drop table cargos;
+drop table knex_migrations_lock;
+drop table knex_migrations;
 
 --------------------------------
 --------------------------------
@@ -138,6 +140,27 @@ C:\cecom\cecom.saude.api> npx knex migrate:make create_table_pacienteshumor
 C:\cecom\cecom.saude.api> npx knex migrate:make create_table_parcelasreceber
 C:\cecom\cecom.saude.api> npx knex migrate:make create_table_parcelasreceberassinatura
 C:\cecom\cecom.saude.api> npx knex migrate:make create_table_evolucoesfinanceiro
+
+--------------------------------
+--------------------------------
+Atualizar as alterações de banco (migrate)
+--------------------------------
+--------------------------------
+
+Limpe o Cache do Knex:
+C:\cecom\cecom.saude.api> npx knex migrate:rollback
+C:\cecom\cecom.saude.api> npx knex migrate:latest
+
+Isso pode resolver problemas relacionados a estados inconsistentes de migração.
+
+	C:\cecom\cecom.saude.api> npx knex migrate:status
+	C:\cecom\cecom.saude.api> npx knex migrate:latest
+
+DROP TABLE IF EXISTS "knex_migrations";
+DROP TABLE IF EXISTS "knex_migrations_lock";
+SELECT * FROM information_schema.tables WHERE table_name = 'knex_migrations';
+
+DEBUG=knex:* npx knex migrate:latest
 
 
 --------------------------------

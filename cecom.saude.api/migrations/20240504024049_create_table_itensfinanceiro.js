@@ -1,10 +1,10 @@
 exports.up = function(knex) {
   return knex.schema.createTable('cecom.itensfinanceiro', table => {
     table.increments('cd_itenfinanceiro').primary();
-    table.integer('cd_financeiro').notNullable();
-    table.smallint('numero_parcela').notNullable();
-    table.decimal('valor_parcela').notNullable();
-    table.timestamp('dt_vencimento').nullable();
+    table.integer('cd_financeiro').notNull();
+    table.smallint('numero_parcela').notNull();
+    table.decimal('valor_parcela').notNull();
+    table.timestamp('dt_vencimento');
 
     // Primary Key
     table.unique(['cd_itenfinanceiro', 'cd_financeiro']);

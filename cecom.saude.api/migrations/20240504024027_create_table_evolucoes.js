@@ -1,23 +1,23 @@
 exports.up = function(knex) {
   return knex.schema.createTable('cecom.evolucoes', table => {
     table.increments('cd_evolucao').primary();
-    table.integer('codigoprof').notNullable();
-    table.string('prontuario', 7).notNullable();
-    table.integer('codigomasterpac').notNullable();
-    table.integer('codigopaciente').notNullable();
-    table.timestamp('dt_evolucao').nullable();
-    table.smallint('cd_tipoevolucao').notNullable();
-    table.binary('evolucao').nullable();
-    table.integer('cd_pessoaautorizacao').nullable();
-    table.timestamp('dt_autorizacao').nullable();
-    table.timestamp('dt_impressao').nullable();
-    table.smallint('cd_motivoexclamacao').nullable();
-    table.integer('codigomasterinvalida').notNullable();
-    table.timestamp('dt_invalidacao').nullable();
-    table.string('motivoinvalidacao', 2000).nullable();
-    table.integer('cd_arquivoassinado').nullable();
-    table.integer('codigomasterarq').notNullable();
-    table.smallint('codigolocalatend').notNullable();
+    table.integer('codigoprof').notNull();
+    table.string('prontuario', 7).notNull();
+    table.integer('codigomasterpac').notNull();
+    table.integer('codigopaciente').notNull();
+    table.timestamp('dt_evolucao');
+    table.smallint('cd_tipoevolucao').notNull();
+    table.binary('evolucao');
+    table.integer('cd_pessoaautorizacao');
+    table.timestamp('dt_autorizacao');
+    table.timestamp('dt_impressao');
+    table.smallint('cd_motivoexclamacao');
+    table.integer('codigomasterinvalida').notNull();
+    table.timestamp('dt_invalidacao');
+    table.string('motivoinvalidacao', 2000);
+    table.integer('cd_arquivoassinado');
+    table.integer('codigomasterarq').notNull();
+    table.smallint('codigolocalatend').notNull();
 
     // Foreign Keys
     table.foreign('cd_arquivoassinado').references('<?>().');

@@ -935,7 +935,7 @@ CREATE TABLE cecom.parcelasreceber (
 	dt_pagamento timestamptz NULL,
 	id_confirmacaopag varchar(50) NULL,
 	CONSTRAINT parcelasreceber_pkey PRIMARY KEY (cd_parcelasreceber, cd_financeiro, cd_itenfinanceiro),
-	CONSTRAINT fk_parcela_itensfinan_foreign FOREIGN KEY (cd_financeiro,cd_itenfinanceiro) REFERENCES   cecom.itensfinanceiro(cd_financeiro,cd_itenfinanceiro),
+	CONSTRAINT fk_parcela_itensfinan_foreign FOREIGN KEY (cd_financeiro,cd_itenfinanceiro) REFERENCES cecom.itensfinanceiro(cd_financeiro,cd_itenfinanceiro),
 	CONSTRAINT fk_parcela_tiporeceb_foreign FOREIGN KEY (cd_tiporecebimento) REFERENCES cecom.tiposrecebimento(codigo)
 );
 

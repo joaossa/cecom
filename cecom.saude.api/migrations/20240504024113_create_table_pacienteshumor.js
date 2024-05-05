@@ -1,14 +1,14 @@
 exports.up = function(knex) {
   return knex.schema.createTable('cecom.pacienteshumor', table => {
     table.increments('cd_pacientehumor').primary();
-    table.integer('codigopacientemaster').notNullable();
-    table.integer('codigopaciente').notNullable();
-    table.timestamp('dt_humor').notNullable();
-    table.integer('codigoevolucao').nullable();
-    table.integer('codigoprof').nullable();
-    table.integer('cidhumano').nullable();
-    table.integer('dsmhumano').nullable();
-    table.smallint('humorintensidade').notNullable();
+    table.integer('codigopacientemaster').notNull();
+    table.integer('codigopaciente').notNull();
+    table.timestamp('dt_humor').notNull();
+    table.integer('codigoevolucao');
+    table.integer('codigoprof');
+    table.integer('cidhumano');
+    table.integer('dsmhumano');
+    table.smallint('humorintensidade').notNull();
 
     // Check Constraint
     table.checkConstraint('humorintensidade IN (1, 2, 3, 4, 5)');
