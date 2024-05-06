@@ -3,6 +3,9 @@
 Apagar tabelas do banco
 --------------------------------
 --------------------------------
+delete from knex_migrations_lock;
+delete from knex_migrations;
+
 
 drop table evolucoesfinanceiro;
 drop table parcelasreceberassinatura;
@@ -40,8 +43,14 @@ drop table ocupacoes;
 drop table motivosexclamacao;
 drop table motivosdesistencia;
 drop table locaisatendimentos;
+DROP FUNCTION IF EXISTS cecom.func_codigo_horario();
+DROP SEQUENCE IF EXISTS cecom.horarios_codigo_seq;
 drop table horarios;
+DROP SEQUENCE IF EXISTS cecom.escolaridades_codigo_seq;
+DROP FUNCTION IF EXISTS cecom.func_codigo_escol();
 drop table escolaridades;
+DROP FUNCTION IF EXISTS cecom.set_codigo_cargo();
+DROP SEQUENCE IF EXISTS cecom.cargos_codigo_seq;
 drop table cargos;
 drop table knex_migrations_lock;
 drop table knex_migrations;
