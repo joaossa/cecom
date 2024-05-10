@@ -138,6 +138,7 @@ C:\cecom\cecom.saude.api> npx knex migrate:make create_table_gruposdsm
 C:\cecom\cecom.saude.api> npx knex migrate:make create_table_master
 C:\cecom\cecom.saude.api> npx knex migrate:make create_table_pacientes
 C:\cecom\cecom.saude.api> npx knex migrate:make create_table_profissionais
+C:\cecom\cecom.saude.api> npx knex migrate:make alter_table_pacientes_uniquekey
 C:\cecom\cecom.saude.api> npx knex migrate:make create_table_prontuariospacientes
 C:\cecom\cecom.saude.api> npx knex migrate:make create_table_quadrosvagas
 C:\cecom\cecom.saude.api> npx knex migrate:make create_table_unidadesorganizacionais
