@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter";
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+:root {
+  --blue-color: #5bd8d8;
+  --red-color: #fa4546;
+  --yellow-color: #fed249;
+  --background-color: #f4f6f8;
+}
